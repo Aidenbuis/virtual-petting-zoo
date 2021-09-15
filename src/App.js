@@ -238,6 +238,7 @@ const MadeBy = ({ onClick, className = "", children }) => {
   return (
     <div className="absolute bottom-0 left-0 flex items-center justify-center w-full">
       <motion.a
+        style={{ ...setCursorCSS("🐦") }}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 1 }}
         className={`bottom-0 mb-6 text-5xl font-bold cats-alphabet text-center text-white absolute z-10`}
@@ -246,6 +247,7 @@ const MadeBy = ({ onClick, className = "", children }) => {
         MADE BY AIDEN
       </motion.a>
       <motion.a
+        style={{ ...setCursorCSS("🐦") }}
         className={`bottom-0 mb-6 text-5xl font-bold cats-alphabet text-center text-orange-700 absolute z-0 -mt-1 -ml-2`}
         href="twitter.com/aidenbuis"
       >
