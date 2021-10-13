@@ -276,7 +276,7 @@ const MadeBy = ({ onClick, className = "", children }) => {
       <motion.a
         style={{ ...setCursorCSS("🐦") }}
         className={`bottom-0 mb-6 text-5xl font-bold cats-alphabet text-center text-orange-700 absolute z-0 -mt-1 -ml-2`}
-        href="twitter.com/aidenbuis"
+        href="https://twitter.com/aidenbuis"
       >
         MADE BY AIDEN
       </motion.a>
