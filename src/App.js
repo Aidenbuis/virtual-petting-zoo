@@ -54,13 +54,17 @@ const App = () => {
         }")`,
         ...setCursorCSS("✌️"),
       }}
-      className="flex flex-col items-center justify-center w-screen h-screen"
+      className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden"
     >
       <div className="fixed top-0 left-0 z-10 w-screen h-screen bg-black opacity-40" />
       <h1
-        className={`text-5xl font-bold cats-alphabet text-white z-50 ml-8 -mt-32`}
+        className={`text-3xl md:text-5xl font-bold cats-alphabet text-white z-50 md:ml-8 md:-mt-32 text-center`}
       >
-        VIRTUAL PETTING ZOO
+        VIRTUAL
+        <br />
+        PETTING
+        <br />
+        ZOO
       </h1>
       <GifDisplay />
       <MadeBy />
@@ -169,12 +173,35 @@ const GifDisplay = () => {
 
   const smallestWidthGif = 220;
 
+  /**
+   * Function that transforms the
+   * @param {number} currentWidth
+   */
+  const calculateTransform = ({ currentWidth }) => {
+    const screenWidth = window.screen.width;
+
+    console.log(screenWidth);
+    console.log(currentWidth);
+
+    if (screenWidth < currentWidth) {
+      // Scale the gif to the current screen minus 10px
+      return { transform: `scale(0.5)`, marginTop: "-6rem" };
+    } else {
+      return { transform: `scale(1)` };
+    }
+  };
+
   return (
     <div className="relative z-10 mt-4">
       <div
         className="overflow-hidden bg-gray-100 border-8 border-white rounded-lg shadow-2xl "
         ref={imageContainerRef}
-        style={{ ...setCursorCSS() }}
+        style={{
+          ...setCursorCSS(),
+          ...calculateTransform({
+            currentWidth: gifs[currentGif].width * 2,
+          }),
+        }}
       >
         <div
           style={{
@@ -186,7 +213,7 @@ const GifDisplay = () => {
             transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
             transitionDuration: "150ms",
           }}
-          className="overflow-hidden transition duration-200 ease-in bg-no-repeat bg-cover rounded-lg select-none w-96"
+          className="overflow-hidden transition duration-200 ease-in bg-no-repeat bg-cover rounded-lg select-none w-96 sm:scale-75"
           ref={imageRef}
           alt="Animal Gif"
         />
