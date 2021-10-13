@@ -58,7 +58,7 @@ const App = () => {
     >
       <div className="fixed top-0 left-0 z-10 w-screen h-screen bg-black opacity-40" />
       <h1
-        className={`text-3xl md:text-5xl font-bold cats-alphabet text-white z-50 md:ml-8 md:-mt-32 text-center`}
+        className={`text-3xl md:text-5xl font-bold cats-alphabet text-white z-20 md:ml-8 md:-mt-32 text-center`}
       >
         VIRTUAL
         <br />
@@ -192,7 +192,7 @@ const GifDisplay = () => {
   };
 
   return (
-    <div className="relative z-10 mt-4">
+    <div className="relative z-30 mt-4">
       <div
         className="overflow-hidden bg-gray-100 border-8 border-white rounded-lg shadow-2xl "
         ref={imageContainerRef}
@@ -219,7 +219,7 @@ const GifDisplay = () => {
         />
       </div>
       <div
-        className="fixed left-0 w-full h-screen"
+        className="fixed left-0 z-50 w-full h-screen"
         style={{ top: "calc(70vh)" }}
       >
         <div
@@ -277,6 +277,8 @@ const MadeBy = ({ onClick, className = "", children }) => {
         style={{ ...setCursorCSS("🐦") }}
         className={`bottom-0 mb-6 text-5xl font-bold cats-alphabet text-center text-orange-700 absolute z-0 -mt-1 -ml-2`}
         href="https://twitter.com/aidenbuis"
+        target="_blank"
+        rel="noreferrer"
       >
         MADE BY AIDEN
       </motion.a>
