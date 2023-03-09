@@ -1,3 +1,8 @@
+<p align="center">
+  <img width="800" height="354" src="https://user-images.githubusercontent.com/9105359/224079326-e78b62a1-0320-4295-981c-f478dbc5cdfb.gif">
+</p>
+
+
 # 🐶 Welcome to the Virtual Petting Zoo! 🐱
 
 Here you can experience the joy of interacting with adorable and cuddly animals from the comfort of your own home! Our website is designed to provide you with a unique and immersive petting experience, allowing you to pet a variety of animals with just a simple mouse movement.
